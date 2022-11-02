@@ -57,7 +57,7 @@ for i in wordarr:
 		temp = '/' + s + "." + ext
 	elif type=="dir":
 		temp = '/' + s + '/'
-	resp = requests.get(url=URL + temp)
+	resp = requests.get(url=URL + temp, verify=False)
 	if resp.status_code == 200:
 		print(("\r\x1b[K"),end='',flush=True)
 		print("\033[94m" + URL + "\033[96m" + temp)
